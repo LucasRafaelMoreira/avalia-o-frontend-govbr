@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+        <html lang="pt-br">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Consultar Imóvel</title>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link rel="stylesheet" href="css/consultaPessoa.css" />
+        </head>
+        <body>
+
+            <!-- Cabeçalho -->
+            <header>
+                <img src="/img/file.png" alt="Logo">
+                <h1>Controle de Imóveis</h1>
+            </header>
+
+            <!-- Navbar -->
+            <nav>
+                <ul>
+                    <li><a href="/">Página Inicial</a></li>
+                    <li><a href="/cadastroPessoa">Cadastrar Pessoa</a></li>
+                    <li><a href="/consultaPessoas">Consultar Pessoas</a></li>
+                    <li><a href="/cadastroImovel">Cadastrar Imóvel</a></li>
+                    <li><a href="/consultaImovel">Consultar Imóveis</a></li>
+                    <li><a href="/iptu">Cálculo de IPTU</a></li>
+                </ul>
+            </nav>
+
+            <br>
+            <!-- Conteúdo Principal -->
+            <div class="container">
+
+                <div class="form-container">
+                    <form method="GET">
+                        <div class="input-group">
+                            <h2>Consultar Imóvel</h2>
+                            <!-- <label for="id">ID</label> -->
+                            <br>
+                            <input type="text" placeholder="Digite o ID do imóvel">
+                            <br>
+                            <button>Buscar Imóvel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <table>
+                    <tr>
+                      <th>Id</th>
+                      <th>Nome Completo</th>
+                      <th>Nascimento</th>
+                      <th>CPF</th>
+                      <th>Telefone</th>
+                      <th>Endereço</th>
+                    </tr>
+                    <tr>
+                      <td>Alfreds Futterkiste</td>
+                      <td>Maria Anders</td>
+                      <td>Germany</td>
+                      <td>Germany</td>
+                      <td>Germany</td>
+                      <td>Germany</td>
+                    </tr>
+                    <tr>
+                      <td>Alfreds Futterkiste</td>
+                      <td>Maria Anders</td>
+                      <td>Germany</td>
+                      <td>Germany</td>
+                      <td>Germany</td>
+                      <td>Germany</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Rodapé -->
+            <footer>
+                &copy; 2025 Controle de Imóveis. Todos os direitos reservados.
+            </footer>
+
+        </body>
+        </html>

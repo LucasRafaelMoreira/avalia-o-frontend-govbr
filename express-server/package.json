@@ -1,0 +1,17 @@
+{
+  "name": "avalia-o-frontend-govbr",
+  "version": "1.0.0",
+  "description": "Avaliação de Front-end para processo seletivo da GovBr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "html": "^1.0.0"
+  },
+  "devDependencies": {}
+}
