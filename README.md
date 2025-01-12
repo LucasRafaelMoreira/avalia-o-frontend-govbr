@@ -1,3 +1,7 @@
+Para rodar de cd em express-server e depois rode o comando node index.js no terminal
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Resposta para as perguntas.
 
 -   Você já possuia alguma experiência com ferramentas de versionamento? Quais?
