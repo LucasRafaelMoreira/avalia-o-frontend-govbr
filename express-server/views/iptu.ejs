@@ -36,15 +36,39 @@
                             <br>
                             <input type="text" id="propertyId" name="propertyId" placeholder="Digite o ID do imóvel">
                             <br>
-                            <button type="submit">Calcular IPTU</button>
+                            <button type="button" onclick="calcularIPTU()">Calcular IPTU</button>
+                        </div>
+                        <div>
+                            <h2>Resultado</h2>
+                            <label id="valorIptu"></label>
+                        </div>
+                        <hr>
+                        <div class="input-group">
+                            <h2>Consultar Imóvel</h2>
+                            <br>
+                            <button type="submit">Buscar Imóveis</button>
                         </div>
                     </form>
                     
-                    <div>
-                        <h2>Resultado</h2>
-                        <label id="valorIptu"></label>
-                    </div>
                 </div>
+
+                <table id="propertyTable" border="1">
+                    <thead>
+                        <tr>
+                          <th>Id</th>
+                          <th>Nome Proprietário</th>
+                          <th>Endereço</th>
+                          <th>Tipo do Imóvel</th>
+                          <th>Área</th>
+                          <th>Valor do Imóvel (R$)</th>
+                          <th>Alíquota do Imóvel (%)</th>
+                          <th>Data de Registro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
 
 
             </div>

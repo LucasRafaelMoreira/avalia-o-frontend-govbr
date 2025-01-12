@@ -13,14 +13,13 @@ async function fetchClient() {
         clientTableBody.innerHTML = '';
 
         clients.forEach(client => {
-
-        const row = clientTableBody.insertRow();
-        row.insertCell(0).textContent = client.id;
-        row.insertCell(1).textContent = client.nome;
-        row.insertCell(2).textContent = client.nascimento;
-        row.insertCell(3).textContent = client.cpf;
-        row.insertCell(4).textContent = client.telefone;
-        row.insertCell(5).textContent = client.endereco;
+            const row = clientTableBody.insertRow();
+            row.insertCell(0).textContent = client.id;
+            row.insertCell(1).textContent = client.nome;
+            row.insertCell(2).textContent = client.nascimento;
+            row.insertCell(3).textContent = client.cpf;
+            row.insertCell(4).textContent = client.telefone;
+            row.insertCell(5).textContent = client.endereco;
         });
     } catch (error) {
         console.error('Fetch error:', error);
@@ -37,6 +36,7 @@ async function fetchClient() {
         row.insertCell(3).textContent = '';
         row.insertCell(4).textContent = '';
         row.insertCell(5).textContent = '';
+
     }
 }
 
