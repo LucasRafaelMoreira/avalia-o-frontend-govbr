@@ -1,0 +1,7 @@
+const express = require('express');
+const router = express.Router();
+const clientsController = require('../controllers/clientsController');
+
+router.get('/:id', clientsController.getClientById);
+
+module.exports = router;

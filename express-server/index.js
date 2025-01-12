@@ -3,6 +3,7 @@ const ejs = require('ejs');
 const app = express();
 const path = require('path');
 const port = 3000;
+// const clientsRoutes = require('./routes/clientsRoutes');
 
 // app.get('/', (req, res) => {
 //   res.send('Hello, World!'
@@ -13,6 +14,9 @@ app.set('view engine','ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // app.engine('ejs', require('ejs').__express);
+app.use(express.json());
+// app.use('/api/clients', clientsRoutes);
+
 
 app.get('/', (req, res) => {res.render('index')});
 app.get('/cadastroPessoa', (req, res) => {res.render('cadastroPessoa')});
