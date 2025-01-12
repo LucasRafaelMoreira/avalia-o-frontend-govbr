@@ -1,14 +1,16 @@
-async function fetchProperty() {
+async function fetchClient() {
     const clientId = document.getElementById('clientId').value;
     const response = await fetch(`http://localhost:3000/api/clients/${clientId}`);
     const client = await response.json();
 
-    const clientInfoDiv = document.getElementById('clientInfo');
-    if (response.ok) {
-        clientInfoDiv.innerHTML = `<p>ID: ${client.id}</p><p>Name: ${client.name}</p><p>Email: ${client.email}</p>`;
-    } else {
-        clientInfoDiv.innerHTML = `<p>${client.message}</p>`;
-    }
+    return client;
+
+    // const clientInfoDiv = document.getElementById('clientInfo');
+    // if (response.ok) {
+    //     clientInfoDiv.innerHTML = `<p>ID: ${client.id}</p><p>Name: ${client.name}</p><p>Email: ${client.email}</p>`;
+    // } else {
+    //     clientInfoDiv.innerHTML = `<p>${client.message}</p>`;
+    // }
 }
 
 async function registrar() {

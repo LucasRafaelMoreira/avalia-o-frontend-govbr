@@ -6,6 +6,7 @@
             <title>Cadastrar Imóvel</title>
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <link rel="stylesheet" href="css/cadastroImovel.css" />
+            <script type="text/javascript" src="js/imovelFuncoes.js"></script>
         </head>
         <body>
 
@@ -43,7 +44,7 @@
                 <main class="content">
                     <div class="form-container">
                         <h2>Cadastrar Imóvel</h2>
-                        <form action="/submit" method="POST">
+                        <form>
     
                             <div class="input-group">
                                 <label for="nomePropietario">Nome do Proprietário</label>
@@ -62,7 +63,7 @@
                                 <select id="tipoImovel" name="tipoImovel" required>
                                     <option value="residencial">Residencial</option>
                                     <option value="comercial">Comercial</option>
-                                    <option value="terreno">Terreno</option>
+                                    <option value="terreno">Terrno</option>
                                     <option value="industrial">Industrial</option>
                                 </select>
                             </div>
@@ -75,17 +76,17 @@
                     
                             <!-- Valor do imóvel -->
                             <div class="input-group">
-                                <label for="value">Valor do Imóvel (R$)</label>
-                                <input type="number" id="value" name="value" step="0.01" placeholder="Digite o valor do imóvel" required>
+                                <label for="valorImovel">Valor do Imóvel (R$)</label>
+                                <input type="number" id="valorImovel" name="valorImovel" step="0.01" placeholder="Digite o valor do imóvel" required>
                             </div>
                     
                             <!-- Data de registro -->
                             <div class="input-group">
-                                <label for="registration-date">Data de Registro</label>
-                                <input type="date" id="registration-date" name="registration_date" required>
+                                <label for="dataRegistro">Data de Registro</label>
+                                <input type="date" id="dataRegistro" name="dataRegistro" required>
                             </div>
                     
-                            <button type="submit" onclick="">Cadastrar</button>
+                            <button onclick="registrar()">Cadastrar</button>
                     
                     
                         </form>

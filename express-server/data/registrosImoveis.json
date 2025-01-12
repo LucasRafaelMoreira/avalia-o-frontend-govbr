@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ca78a462-0491-4e79-8c15-67eb2e601444",
+    "nomePropietario": "LUCAS RAFAEL MOREIRA",
+    "endereco": "strtrtrt",
+    "tipoImovel": "",
+    "area": "400",
+    "valorImovel": "1000",
+    "dataRegistro": "2024-11-25"
+  },
+  {
+    "id": "b647af64-1373-4a2d-92cb-54025a9e7452",
+    "nomePropietario": "LUCAS RAFAEL MOREIRA",
+    "endereco": "strtrtrt",
+    "tipoImovel": "",
+    "area": "400",
+    "valorImovel": "1000",
+    "dataRegistro": "2024-11-25"
+  },
+  {
+    "id": "c2da0fd1-db72-42c6-b7a7-8615462e15c8",
+    "nomePropietario": "Roberson",
+    "endereco": "dsds",
+    "tipoImovel": "residencial",
+    "area": "500",
+    "valorImovel": "1000",
+    "dataRegistro": "2024-02-05"
+  },
+  {
+    "id": "8c571534-9981-441c-9265-61bf8d0bba72",
+    "nomePropietario": "Roberson",
+    "endereco": "dsds",
+    "tipoImovel": "residencial",
+    "area": "500",
+    "valorImovel": "1000",
+    "dataRegistro": "2024-02-05"
+  },
+  {
+    "id": "79d9b356-aa95-406e-95b0-b7524e943670",
+    "nomePropietario": "Roberson",
+    "endereco": "dsds",
+    "tipoImovel": "residencial",
+    "area": "500",
+    "valorImovel": "1000",
+    "dataRegistro": "2024-02-05"
+  },
+  {
+    "id": "54e71056-c54c-4075-974e-2bff60ffbb18",
+    "nomePropietario": "Robersonsdds",
+    "endereco": "teste",
+    "tipoImovel": "industrial",
+    "area": "700",
+    "valorImovel": "45000",
+    "dataRegistro": "2024-07-04"
+  }
+]
