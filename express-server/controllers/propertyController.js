@@ -5,6 +5,30 @@ const { v4: uuidv4 } = require('uuid');
 
 const filePath = path.join(__dirname, '../data', 'registrosImoveis.json');
 
+
+exports.getAllProperties = (req, res) => {
+    // Read the existing data from the file
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).json({ message: 'Error reading property data' });
+        }
+
+        let properties = [];
+        if (data) {
+            try {
+                properties = JSON.parse(data);
+                if (!Array.isArray(properties)) {
+                    properties = [];
+                }
+            } catch (e) {
+                return res.status(500).json({ message: 'Error parsing property data' });
+            }
+        }
+
+        res.json(properties);
+    });
+};
+
 exports.getPropertyById = (req, res) => {
     const propertyId = req.params.id;
 

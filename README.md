@@ -1,4 +1,4 @@
-Para rodar de cd em express-server e depois rode o comando node index.js no terminal
+Para rodar o programa bote no terminal "CD" para express-server e depois rode o comando "node index.js" no terminal
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -1,14 +1,19 @@
 async function fetchClient() {
-    const clientId = document.getElementById('clientId').value;
-    const response = await fetch(`http://localhost:3000/api/clients/${clientId}`);
-    const client = await response.json();
+    try {
+        const response = await fetch('http://localhost:3000/api/clients');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const clients = await response.json();
 
-    const clientTable = document.getElementById('clientTable');
-    const clientTableBody = clientTable.querySelector('tbody');
+        const clientTable = document.getElementById('clientTable');
+        const clientTableBody = clientTable.querySelector('tbody');
 
-    clientTableBody.innerHTML = '';
+        // Clear existing table rows
+        clientTableBody.innerHTML = '';
 
-    if (response.ok) {
+        clients.forEach(client => {
+
         const row = clientTableBody.insertRow();
         row.insertCell(0).textContent = client.id;
         row.insertCell(1).textContent = client.nome;
@@ -16,7 +21,15 @@ async function fetchClient() {
         row.insertCell(3).textContent = client.cpf;
         row.insertCell(4).textContent = client.telefone;
         row.insertCell(5).textContent = client.endereco;
-    } else {
+        });
+    } catch (error) {
+        console.error('Fetch error:', error);
+        const clientTable = document.getElementById('clientTable');
+        const clientTableBody = clientTable.querySelector('tbody');
+
+        // Clear existing table rows
+        clientTableBody.innerHTML = '';
+
         const row = clientTableBody.insertRow();
         row.insertCell(0).textContent = 'Error';
         row.insertCell(1).textContent = '';
