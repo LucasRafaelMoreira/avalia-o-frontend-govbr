@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mui/icons-material": "^6.3.1",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "html": "^1.0.0"
-  },
-  "devDependencies": {}
+  }
 }
