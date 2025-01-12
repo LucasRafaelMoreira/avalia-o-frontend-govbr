@@ -4,18 +4,16 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Cadastrar Pessoa</title>
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link rel="shortcut icon" type="imagex/png" href="./img/file.ico">
             <link rel="stylesheet" href="css/cadastroPessoa.css" />
         </head>
         <body>
 
-            <!-- Cabeçalho -->
             <header>
                 <img src="/img/file.png" alt="Logo">
                 <h1>Controle de Imóveis</h1>
             </header>
 
-            <!-- Navbar -->
             <nav>
                 <ul>
                     <li><a href="/">Página Inicial</a></li>
@@ -28,18 +26,7 @@
             </nav>
 
             <br>
-            <!-- Conteúdo Principal -->
             <div class="container">
-
-                <!-- Sidebar -->
-                <!-- <aside class="sidebar"> -->
-                    <!-- <a href="#"><span class="material-icons">facebook</span>Facebook</a>
-                    <a href="#"><span class="material-icons">twitter</span>Twitter</a>
-                    <a href="#"><span class="material-icons">instagram</span>Instagram</a>
-                    <a href="#"><span class="material-icons">linkedin</span>LinkedIn</a> -->
-                <!-- </aside> -->
-
-                <!-- Conteúdo -->
                 <main class="content">
                     <div class="form-container">
                         <h2>Cadastrar Pessoa</h2>
@@ -47,23 +34,23 @@
     
                             <div class="input-group">
                                 <label for="nome">Nome Completo</label>
-                                <input type="text" id="nome" name="nome">
+                                <input type="text" id="nome" name="nome" placeholder="Digite o nome completo" required>
                             </div>
                             <div class="input-group">
                                 <label for="nascimento">Nascimento</label>
-                                <input type="date" id="nascimento" name="nascimento">
+                                <input type="date" id="nascimento" name="nascimento" placeholder="Digite o nascimento" required>
                             </div>
                             <div class="input-group">
                                 <label for="cpf">CPF</label>
-                                <input type="number" maxlength="11" minlength="11" id="cpf" name="cpf">
+                                <input type="number" maxlength="11" minlength="11" id="cpf" name="cpf" placeholder="Digite o CPF" required>
                             </div>
                             <div class="input-group">
                                 <label for="telefone">Telefone</label>
-                                <input type="phone" maxlength="11" minlength="11" id="telefone" name="telefone">
+                                <input type="phone" maxlength="11" minlength="11" id="telefone" name="telefone" placeholder="Digite o telefone" required>
                             </div>
                             <div class="input-group">
                                 <label for="endereco">Endereço</label>
-                                <input type="text" id="endereco" name="endereco">
+                                <input type="text" id="endereco" name="endereco" placeholder="Digite o valor do endereço" required>
                             </div>
                     
                             <button type="submit">Cadastrar</button>
@@ -74,7 +61,6 @@
                 </main>
             </div>
 
-            <!-- Rodapé -->
             <footer>
                 &copy; 2025 Controle de Imóveis. Todos os direitos reservados.
             </footer>
