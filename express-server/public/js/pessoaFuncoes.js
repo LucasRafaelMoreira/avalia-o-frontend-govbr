@@ -3,14 +3,28 @@ async function fetchClient() {
     const response = await fetch(`http://localhost:3000/api/clients/${clientId}`);
     const client = await response.json();
 
-    return client;
+    const clientTable = document.getElementById('clientTable');
+    const clientTableBody = clientTable.querySelector('tbody');
 
-    // const clientInfoDiv = document.getElementById('clientInfo');
-    // if (response.ok) {
-    //     clientInfoDiv.innerHTML = `<p>ID: ${client.id}</p><p>Name: ${client.name}</p><p>Email: ${client.email}</p>`;
-    // } else {
-    //     clientInfoDiv.innerHTML = `<p>${client.message}</p>`;
-    // }
+    clientTableBody.innerHTML = '';
+
+    if (response.ok) {
+        const row = clientTableBody.insertRow();
+        row.insertCell(0).textContent = client.id;
+        row.insertCell(1).textContent = client.nome;
+        row.insertCell(2).textContent = client.nascimento;
+        row.insertCell(3).textContent = client.cpf;
+        row.insertCell(4).textContent = client.telefone;
+        row.insertCell(5).textContent = client.endereco;
+    } else {
+        const row = clientTableBody.insertRow();
+        row.insertCell(0).textContent = 'Error';
+        row.insertCell(1).textContent = '';
+        row.insertCell(2).textContent = '';
+        row.insertCell(3).textContent = '';
+        row.insertCell(4).textContent = '';
+        row.insertCell(5).textContent = '';
+    }
 }
 
 async function registrar() {
@@ -34,4 +48,23 @@ async function registrar() {
       }
 
 
+}
+
+async function remover() {
+    const clientId = document.getElementById('clientId').value;
+
+    try {
+        const response = await fetch(`http://localhost:3000/api/clients/${clientId}`, {
+            method: 'DELETE'
+        });
+
+        if (response.ok) {
+            alert("Registro removido com sucesso!");
+        } else {
+            alert("Erro ao remover o registro. Tente novamente.");
+        }
+    } catch (error) {
+        console.error('Fetch error:', error);
+        alert("Erro ao remover o registro. Tente novamente.");
+    }
 }

@@ -4,8 +4,8 @@ const app = express();
 const path = require('path');
 
 const port = 3000;
-// const DATA_PATH = "./data/registros.json";
 const clientsRoutes = require('../express-server/routes/clientRoutes');
+const propertiesRoutes = require('../express-server/routes/propertyRoutes');
 
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -17,6 +17,7 @@ app.post('/cadastroPessoa', (req, res) => {
 });
 
 app.use('/api/clients', clientsRoutes);
+app.use('/api/properties', propertiesRoutes);
 
 app.get('/', (req, res) => { res.render('index'); });
 app.get('/cadastroPessoa', (req, res) => { res.render('cadastroPessoa'); });
